@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+	int Design,Programming, WebProg, SystemAdmin, UserPrefer;
+
+	Design, Programming, WebProg, SystemAdmin = 1, 2, 3, 4;
+	cout << "1 - Design, 2 - Programming, 3 - WebProg, 4 - SystemAdmin " << endl;
+
+	cout << "Choose the direction: ";
+	cin >> UserPrefer;
+	
+	switch (UserPrefer) {
+	case 1:
+		std::cout << "Design" << endl;
+		break;
+	case 2:
+		cout << "Programming" << endl;
+		break;
+	case 3:
+		cout << "WebProg" << endl;
+		break;
+	case 4:
+		cout << "SystemAdmin" << endl;
+		break;
+	default:
+		cout << "Такого направления нету :( " << endl;
+	}
+	return 0;
+}
