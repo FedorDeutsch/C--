@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "RU");
+	int num;
+	cout << " Enter num: ";
+	cin >> num;
+	if (num % 2 == 0) {
+		cout << "Это четное число";
+	}
+	else
+		cout << "Это нечетное число";
+
+	return 0;
+}
