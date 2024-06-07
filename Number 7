@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num1, num2;
+
+    cout << "Введите первое число: ";
+    cin >> num1;
+
+    cout << "Введите второе число: ";
+    cin >> num2;
+
+    cout << "Числа между " << num1 << " и " << num2 << endl;
+
+    if (num1 <= num2) {
+        for (int i = num1; i <= num2; ++i) {
+            cout << i << " ";
+        }
+    } else {
+        for (int i = num2; i <= num1; ++i) {
+            cout << i << " ";
+        }
+    }
+
+    cout << endl;
+    return 0;
+}
