@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int sum = 0;   
+  int tovar, tovar1, tovar2, tovar3; 
+
+  cout << "Enter tovar: ";
+  cin >> tovar;
+  cout << "Enter tovar1: ";
+  cin >> tovar1;
+  cout << "Enter tovar2: ";
+  cin >> tovar2;
+  cout << "Enter tovar3: ";
+  cin >> tovar3;
+
+  sum = tovar + tovar1 + tovar2 + tovar3;
+
+  cout << "Всего: " << sum << endl;  
+
+  if (sum > 1000) {
+    sum += sum * 0.2;
+    cout << "Сумма: " << sum << endl; 
+  }
+
+  return 0;
+}
