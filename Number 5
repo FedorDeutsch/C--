@@ -2,27 +2,25 @@
 using namespace std;
 
 int main() {
+    const int MAX_SIZE = 100; // Максимальный размер для массива Фибоначчи
     int n;
 
-    cout << "Введите число n: ";
+    cout << "Введите число N: ";
     cin >> n;
 
-    if (n <= 0) {
-        cout << "Ошибка: Число n должно быть положительным." << endl;
+    if (n <= 1 || n > MAX_SIZE) {
+        cout << "ERROR" << endl;
         return 1;
     }
 
+    int fibonachi[MAX_SIZE] = {0, 1}; // Инициализация первых двух чисел
+
     cout << "Первые " << n << " чисел Фибоначчи:" << endl;
-
-    int fib[n];
-    fib[0] = 0;
-    fib[1] = 1;
-
-    cout << fib[0] << " " << fib[1] << " ";
+    cout << fibonachi[0] << " " << fibonachi[1] << " ";
 
     for (int i = 2; i < n; ++i) {
-        fib[i] = fib[i - 1] + fib[i - 2];
-        cout << fib[i] << " ";
+        fibonachi[i] = fibonachi[i - 1] + fibonachi[i - 2];
+        cout << fibonachi[i] << " ";
     }
 
     cout << endl;
