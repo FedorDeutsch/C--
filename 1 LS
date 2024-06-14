@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int const N = 8;
+    int A[N] = { 100, 200, 300, 400, 500, 600, 700, 701 };
+    int m = A[0];
+
+
+    for (int i = 1; i < N; i++) {
+
+        if (A[i] > m) {
+            m = A[i];
+        }
+    }
+
+    cout << m << endl;
+    return 0;
+}
