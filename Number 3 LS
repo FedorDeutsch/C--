@@ -1,0 +1,29 @@
+#include <iostream>
+#include <locale> // Для setlocale
+
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "Russian");
+
+    int a; 
+    cout << "Введите количество элементов в массиве: " << endl;
+    cin >> a;
+
+
+    int* array = new int[a];
+
+    for (int i = 0; i < a; i++) {
+        cout << "Введите число " << i + 1 << ": ";
+        cin >> array[i];
+    }
+
+    for (int i = 0; i < a; i++) {
+        cout << array[i] << " ";
+    }
+    cout << endl;
+
+    delete[] array;
+
+    return 0;
+}
