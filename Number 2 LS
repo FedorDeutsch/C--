@@ -1,0 +1,38 @@
+#include <iostream>
+#include <ctime>
+#include <cstdlib> // Для функции rand()
+
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "Russian");
+
+    srand(time(0));
+
+
+    int array[10];
+
+
+    for (int i = 0; i < 10; i++) {
+        array[i] = rand() % 100 + 1; 
+    }
+
+
+    cout << "Массив: ";
+    for (int i = 0; i < 10; i++) {
+        cout << array[i] << " ";
+    }
+    cout << endl;
+
+
+    int sum = 0;
+    for (int i = 0; i < 10; i++) {
+        sum += array[i];
+    }
+    double average = static_cast<double>(sum) / 10;
+
+
+    cout << "Среднее арифметическое: " << average << endl;
+
+    return 0;
+}
