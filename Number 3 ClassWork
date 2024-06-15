@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    int array[4] = { 1,-2,3,-4 };
+    for (int i = 0; i < 4; i++)
+    {
+        if (array[i] < 0)
+        {
+            cout << "Элемент: " << i << " отрицательный" << endl;
+        }
+        else {
+            cout << "Элемент: " << i << " положительный" << endl;
+        }
+    }
+
+    return 0;
+}
