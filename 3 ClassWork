@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian"); 
+    int sum = 0;
+    int a;
+    cout << "Введите колличество элементов в массиве: ";
+    cin >> a;
+
+    int* array = new int[a];
+
+    for (int i = 0; i < a; i++)
+    {
+        cout << "Введите число: " << endl;
+        cin >> array[i];
+        sum += array[i];
+    }
+
+    for (int i = 0; i < a; i++)
+    {
+        cout << "Элемент " << i << ": " << array[i] << endl;
+    }
+
+    delete[] array;
+
+    return 0;
+}
