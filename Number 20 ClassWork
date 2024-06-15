@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    int* array = new int[4] { 1, -2141495001, 3, -10 };
+
+
+    for (int i = 0; i < 4; i++) {
+        if (array[i] < 0) {
+            cout << "Элемент: " << i << " отрицательный" << endl;
+            array[i] = 0;
+        }
+        else {
+            cout << "Элемент: " << i << " положительный" << endl;
+        }
+    }
+
+ 
+    cout << "Измененный массив: ";
+    for (int i = 0; i < 4; i++) {
+        cout << array[i] << " ";
+    }
+    cout << endl;
+    cout << "It's the best code i ever seen !!!" << endl;
+    
+
+    delete[] array;
+
+    return 0;
+}
