@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+
+    int matrix[2][2] = {
+        {2, 2},
+        {4, 5}
+    };
+
+    int maxStolbSuma = 0;
+    int maxStolbin = 0;
+
+    for (int j = 0; j < 2; j++) {
+        int StolbSum = 0;
+
+        for (int i = 0; i < 2; i++) {
+            StolbSum += matrix[i][j];
+        }
+
+        if (StolbSum > maxStolbSuma) {
+            maxStolbSuma = StolbSum;
+            maxStolbin = j;
+        }
+    }
+
+    cout << "Столбец с наибольшей суммой элементов: " << maxStolbin << endl;
+
+    return 0;
+}
