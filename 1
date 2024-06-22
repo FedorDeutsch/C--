@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+void main()
+{
+	setlocale(LC_ALL, "RU");
+	int array[7][4] = {
+		{1,2,3,4},
+		{1,2,3,4},
+		{1,2,3,4},
+		{1,2,3,4},
+		{1,2,3,4},
+		{1,2,3,4},
+		{1,2,3,5},
+	};
+
+	int i, j;
+	int max = array[7][4];
+	for (i = 0; i < 7; i++)
+		for (j = 0; j < 4; j++)
+			if (array[i][j] > max)
+				max = array[i][j];
+
+	cout << "Максимальное число: " << max;
+}
