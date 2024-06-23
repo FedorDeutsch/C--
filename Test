@@ -1,0 +1,46 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "RU");
+	/* Ссылки */
+
+	int num = 10;
+	int &a = num;
+
+	cout << num << endl;
+	cout << &a << endl;
+	cout << &num << endl;
+	cout << a << endl;
+
+	/* Указатели */
+
+	int number = 20;
+	int* ptr_number = &number;
+
+	cout << &number << endl;
+	cout << ptr_number << endl;
+	*ptr_number = 21; /*Изменение | При изменении нужно ставить звездочку | С помощью указателя можно изменить значение самой переменной*/
+	cout << number << " Изменение" << endl;
+	ptr_number = nullptr; /* Обнуление | При обнуленнии ничего не нужно ставить | */
+	cout << ptr_number << " Обнуление" << endl;
+	cout << number << " Обнуляеться только сам указатель" << endl;
+
+
+	/* Пример */
+	int array[] = { 1,2,3,4 };
+	
+
+	return 0;
+}
+int output()
+{
+	int array[] = { 1,2,3,4 };
+	for (int i = 0; i < 4; i++)
+	{
+		cout << array[i];
+	}
+}
