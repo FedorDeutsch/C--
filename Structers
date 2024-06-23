@@ -1,0 +1,30 @@
+#include <iostream>
+#include <String>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "RU");
+	
+	struct Tree 
+	{
+		string name;
+		int ages;
+		bool is_alive;
+		int height;
+
+		void get_info()
+		{
+			cout << name << " Зовут" << endl;
+			cout << ages << " Лет" << endl;
+		}
+	};
+	
+	Tree dub;
+	dub.ages = 10;
+	dub.name = "Dub";
+	dub.height = 100;
+	dub.is_alive = true;
+	dub.get_info();
+	return 0;
+}
