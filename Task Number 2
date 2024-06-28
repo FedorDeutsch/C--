@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+void perest(int a, int b)
+{
+    int base;
+ 
+    base = a;
+    a = b;
+    b = base;
+    cout << "A: " << a << endl;
+    cout << "B: " << b;
+    
+}
+
+int main()
+{
+    int a,b;
+    a = 10;
+    b = 20;
+    
+    perest(a,b);
+
+    return 0;
+}
+
