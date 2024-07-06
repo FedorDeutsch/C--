@@ -1,0 +1,76 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Person {
+public:
+
+	// Поля класса (данные)
+
+	int age;
+	string name;
+	bool is_alive;
+
+	// Методы класса (функции)
+	void displayInfo()
+	{
+		cout << "Name: " << name << ",Age: " << age << endl;
+		if (is_alive == 0)
+		{
+			cout << name << " Dead" << endl;
+			cout << "Rest In Peace | RIP" << endl;
+		}
+		else
+		{
+
+			cout << name << " Still Alive" << endl;
+			
+
+		}
+	}
+
+};
+
+int main()
+{
+	Person person1;
+	person1.name = "Alice";
+	person1.age = 25;
+	person1.is_alive = true;
+	person1.displayInfo();
+
+	Person* person2 = new Person();
+	person2->name = "Bob";
+	person2->age = 25;
+	person2->is_alive = true;
+	person2->displayInfo();
+
+	Person person3;
+	person3.name = "Fedor";
+	person3.age = 13;
+	person3.is_alive = false;
+	person3.displayInfo();
+
+	delete person2;
+}
+
+int main1()
+{
+	
+	// Создание объекта с оператором new
+	// ClassName* ObjectName = new ClassName(); - Создание нового объекта #1
+	// Создание объекта без оператора new
+	// ClassName ObjectName; -  Создание нового объекта #2
+	// delete ObjectName; - Очистка объекта
+
+
+	/* Модификаторы доступа
+
+		public - Даёт доступ из вне класса
+		private - Даёт доступ только в классе
+		protected - Даёт доступ только внутри класса и его наследников
+		 
+	*/ 
+	
+	return 0;
+}
