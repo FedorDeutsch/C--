@@ -12,10 +12,11 @@ int main()
 		string name;
 		// Методы класса (функции)
 	};	
-
-	// ClassName* ObjectName = new ClassName(); - Создание нового объекта №1
-	// ClassName ObjectName; -  Создание нового объекта №2
-	// delete ObjectName;
+	// Создание объекта с оператором new
+	// ClassName* ObjectName = new ClassName(); - Создание нового объекта #1
+	// Создание объекта без оператора new
+	// ClassName ObjectName; -  Создание нового объекта #2
+	// delete ObjectName; - Очистка объекта
 
 	return 0;
 }
